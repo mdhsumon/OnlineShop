@@ -1,0 +1,47 @@
+.header {
+    background-color: white;
+    border-bottom: 1px solid lightgray;
+    padding: 10px;
+}
+
+.header .logo {
+    max-width: 150px;
+    max-height: 150px;
+}
+
+.header .user {
+    max-width: 50px;
+    max-height: 50px;
+    border-radius: 50%;
+}
+
+.welcome {
+    min-height: 500px;
+}
+
+#login-form {
+    background-color: #f3f3f3;
+    width: 500px;
+    margin: 130px auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#profile {
+    background-color: #f3f3f3;
+    width: 800px;
+    margin: 130px auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.footer {
+    background-color: black;
+    padding: 10px;
+}
+
+.footer .copyright {
+    font-size: 12px;
+    color: white;
+    text-align: center;
+}
