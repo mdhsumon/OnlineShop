@@ -1,6 +1,7 @@
 package com.onineshop.controllers;
 
 import com.onineshop.dtos.ResponseDTO;
+import com.onineshop.services.CategoryService;
 import com.onineshop.services.ProductService;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,22 +16,30 @@ import org.springframework.web.client.RestClientException;
 public class ProductController {
     @Autowired
     ProductService productService;
+    @Autowired
+    CategoryService categoryService;
 
     @GetMapping({"", "/"})
     public String productList(HttpServletRequest request) {
         try {
-            ResponseDTO product = productService.getList();
-            if (product.isSuccess()) {
+            ResponseDTO category = categoryService.getList();
+            String categoryId = request.getParameter("category");
+            if (categoryId != null && !categoryId.isEmpty()) {
+                int id = Integer.parseInt(categoryId);
+                ResponseDTO product = productService.getListByCategory(id);
                 request.setAttribute("products", product.getData());
-                return "productList";
+                request.setAttribute("categories", category.getData());
             }
             else {
-                return "error404";
+                ResponseDTO product = productService.getList();
+                request.setAttribute("products", product.getData());
+                request.setAttribute("categories", category.getData());
             }
         }
         catch (RestClientException e) {
             return "serverError";
         }
+        return "productList";
     }
 
     @GetMapping("/{id}")

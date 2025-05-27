@@ -20,6 +20,11 @@ public class ProductService {
         return restTemplate.getForObject(url, ResponseDTO.class);
     }
 
+    public ResponseDTO getListByCategory(int id) {
+        String url = productUrl + "?category=" + id;
+        return restTemplate.getForObject(url, ResponseDTO.class);
+    }
+
     public ResponseDTO getList() {
         return restTemplate.getForObject(productUrl, ResponseDTO.class);
     }

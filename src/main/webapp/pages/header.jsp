@@ -1,13 +1,13 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <head>
-    <title>Page Title</title>
+    <title>Online Shop</title>
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
 <header>
     <div class="container">
-        <div class="row">
+        <div class="row align-items-center">
             <div class="col-3">
                 <div class="logo">
                     <a href="/"><img src="/images/logo.png" alt="Online Shop Logo"></a>
@@ -31,7 +31,7 @@
             <div class="col-3">
                 <div class="option d-flex justify-content-end">
                     <div class="cart">
-                        <a href="/checkout"><img src="/images/cart.png" alt="Cart Icon"></a>
+                        <a href="#"><img src="/images/cart.png" alt="Cart Icon"></a>
                     </div>
                     <div class="user">
                         <a href="/profile"><img src="/images/profile.png" alt="Profile"></a>
