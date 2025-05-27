@@ -19,4 +19,8 @@ public class ProductService {
         String url = productUrl + id;
         return restTemplate.getForObject(url, ResponseDTO.class);
     }
+
+    public ResponseDTO getList() {
+        return restTemplate.getForObject(productUrl, ResponseDTO.class);
+    }
 }

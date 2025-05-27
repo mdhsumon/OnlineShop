@@ -17,8 +17,20 @@ public class ProductController {
     ProductService productService;
 
     @GetMapping({"", "/"})
-    public String productList() {
-        return "productList";
+    public String productList(HttpServletRequest request) {
+        try {
+            ResponseDTO product = productService.getList();
+            if (product.isSuccess()) {
+                request.setAttribute("products", product.getData());
+                return "productList";
+            }
+            else {
+                return "error404";
+            }
+        }
+        catch (RestClientException e) {
+            return "serverError";
+        }
     }
 
     @GetMapping("/{id}")
