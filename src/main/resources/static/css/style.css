@@ -21,7 +21,11 @@ header .user img {
     object-fit: cover;
 }
 header .nav-item:hover .nav-link {
-    color: green !important;
+    color: #87b838 !important;
+}
+header .nav-item .nav-link {
+    font-weight: bold;
+    margin: 0 15px;
 }
 .slider {
     margin-top: 20px;
@@ -81,4 +85,21 @@ footer .copyright {
 .profile-details .info {
     background-color: #f5f5f5;
     padding: 20px;
+}
+.error-code {
+    text-align: center;
+    font-size: 80px;
+    font-weight: bold;
+    color: red;
+    margin: 50px 0 0;
+}
+.error-message {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 50px;
+    color: red;
+}
+
+.admin header {
+    background-color: #237b80;
 }
