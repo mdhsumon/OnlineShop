@@ -3,6 +3,8 @@ package com.onineshop.services;
 import com.onineshop.config.ApiConfig;
 import com.onineshop.dtos.OrderDTO;
 import com.onineshop.dtos.ResponseDTO;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpMethod;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
@@ -25,7 +27,23 @@ public class OrderService {
         return restTemplate.getForObject(url, ResponseDTO.class);
     }
 
+    public ResponseDTO editById(int id, OrderDTO order) {
+        String url = orderUrl + id;
+        HttpEntity<OrderDTO> request = new HttpEntity<>(order);
+        return restTemplate.exchange(
+                url,
+                HttpMethod.PUT,
+                request,
+                ResponseDTO.class
+        ).getBody();
+    }
+
     public ResponseDTO getList() {
         return restTemplate.getForObject(orderUrl, ResponseDTO.class);
+    }
+
+    public void deleteById(int id) {
+        String url = orderUrl + id;
+        restTemplate.delete(url);
     }
 }

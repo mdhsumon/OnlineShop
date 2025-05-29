@@ -5,7 +5,7 @@
             <%@ include file="sidebar.jsp" %>
         </div>
         <div class="col-9">
-            Dashboard
+            <img class="w-100" src="images/dashboard.png" alt="Dashboard">
         </div>
     </div>
 </div>
