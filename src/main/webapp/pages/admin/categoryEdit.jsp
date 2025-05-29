@@ -20,7 +20,7 @@
                     </div>
                 </div>
                 <div class="mb-3">
-                    <label for="description" class="form-label">Customer Address</label>
+                    <label for="description" class="form-label">Description</label>
                     <textarea class="form-control" name="description" id="description" rows="6">${category.description}</textarea>
                 </div>
                 <div style="text-align: right"><button type="submit" class="btn btn-success">Update</button></div>
