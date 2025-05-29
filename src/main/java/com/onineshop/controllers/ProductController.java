@@ -29,6 +29,7 @@ public class ProductController {
                 ResponseDTO product = productService.getListByCategory(id);
                 request.setAttribute("products", product.getData());
                 request.setAttribute("categories", category.getData());
+                request.setAttribute("categoryId", categoryId);
             }
             else {
                 ResponseDTO product = productService.getList();

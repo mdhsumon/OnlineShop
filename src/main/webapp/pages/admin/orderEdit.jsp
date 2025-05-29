@@ -20,7 +20,7 @@
                     <label for="address" class="form-label">Customer Address</label>
                     <textarea class="form-control" name="customerAddress" id="address" rows="3"></textarea>
                 </div>
-                <div style="text-align: center"><button type="submit" class="btn btn-success">Update</button></div>
+                <div style="text-align: right"><button type="submit" class="btn btn-success">Update</button></div>
             </form>
         </div>
     </div>

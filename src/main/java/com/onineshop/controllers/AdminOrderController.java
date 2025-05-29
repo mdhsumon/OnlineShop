@@ -74,7 +74,7 @@ public class AdminOrderController {
     }
 
     @GetMapping("/order/delete/{id}")
-    public String orderDeletet(@PathVariable int id, HttpServletRequest request) {
+    public String orderDelete(@PathVariable int id, HttpServletRequest request) {
         try {
             orderService.deleteById(id);
             request.setAttribute("pOrder", true);

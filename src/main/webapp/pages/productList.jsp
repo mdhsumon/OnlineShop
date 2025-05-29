@@ -9,7 +9,8 @@
             <div class="sidebar">
                 <ul class="list-group">
                     <%  List<Map<String, CategoryDTO>> categories = (List<Map<String, CategoryDTO>>) request.getAttribute("categories");
-                        for (Map<String, CategoryDTO> category : categories) { %>
+                        for (Map<String, CategoryDTO> category : categories) {
+                    %>
                     <li class="list-group-item">
                         <a class="nav-link" href="?category=<%= category.get("id") %>"><%= category.get("name") %></a>
                     </li>
